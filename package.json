@@ -1,0 +1,31 @@
+{
+  "name": "nacl-wsdk",
+  "version": "0.1.0",
+  "description": "ED25519 implementation for wechat mini program",
+  "main": "nacl-fast.js",
+  "types": "nacl.d.ts",
+  "scripts": {
+    "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix nacl.js nacl-fast.js test/*.js"
+  },
+  "keywords": [
+    "crypto",
+    "curve25519",
+    "ED25519",
+    "sign",
+    "signatures",
+    "x25519-xsalsa20-poly1305."
+  ],
+  "author": "lanbery",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "16.2.3",
+    "eslint": "6.8.0",
+    "tap-browser-color": "^0.1.2",
+    "tape": "4.13.0",
+    "tweetnacl-util": "^0.15.1",
+    "uglify-js": "3.7.5"
+  }
+}
